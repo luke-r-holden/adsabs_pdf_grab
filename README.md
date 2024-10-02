@@ -27,21 +27,21 @@ Either using a script, Python shell, or Jupyter notebook, the function can be im
 `from adsabs_pdf_grab import adsabs_pdf_grab`
 
 Then, to run, use
-`adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory')`
+```adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory')```
 where `bibtex_file.bib` is the .bib file containing the BibTeX entries you wish to download .pdf files for, `ads_api_key` is your ADS API token (which you can generate and view [here](https://ui.adsabs.harvard.edu/user/settings/token) once logged in), and `output_dir` is the directory you want to download the .pdf files to.
 
 Optionally, you can also supress all messages during the download process by setting the `verbose` argument to `False`:
-`adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', verbose=False)`
+```adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', verbose=False)```
 
 By default, any entries that already have a .pdf file of name "[Author][Year].pdf" in the output directory will be skipped. This behaviour can be overwritten setting the `overwrite` argument to `True', which will forcibly redownload all entries in the .bib file and overwrite existing .pdf files. For example:
-`adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', overwrite=True)`
+```adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', overwrite=True)```
 
 ## Additional notes
 
-In the current version of adsabs_pdf_grab, .pdf files are searched for (and downloaded from) the current sources, in order:
+In the current version of adsabs_pdf_grab, .pdf files are searched for (and downloaded from) the current sources, in order of 
  1) The .pdf file hosted on ADS (common for older papers and articles published before 2000).
  2) The [arXiv](https://arxiv.org/) page for the BibTeX entry.
  3) The publisher/journal page for the BibTeX entry.
 The arXiv (pre-print) version of a given entry is given priority due to various issues arising from attempting to access .pdf files directly from publishers and journals, such as URL redirection, log-in screens for institutional access, and paywalls. For these reasons, it is much more reliable to request and download the .pdf file from arXiv.
 
-If there are multiple papers published by the same author(s) in a given year, these are downloaded as [Author][Year].pdf, [Author][Year]b.pdf, [Author][Year]c.pdf, [Author][Year]d.pdf, [Author][Year]e.pdf. Note that, since publishing more than five first-author papers in a single year is exceptionally uncommon (and impressive), this system only extends to the letter `e' --- be mindful of this if you are attempting to use `adsabs_pdf_grab` to download papers from authors that *have* published more than five papers in a single year.
+If there are multiple papers published by the same author(s) in a given year, these are downloaded as [Author][Year].pdf, [Author][Year]b.pdf, [Author][Year]c.pdf, [Author][Year]d.pdf, [Author][Year]e.pdf. Note that, since publishing more than five first-author papers in a single year is exceptionally uncommon (and impressive), this system only extends to the letter `e` --- be mindful of this if you are attempting to use `adsabs_pdf_grab` to download papers from authors that *have* published more than five papers in a single year.
