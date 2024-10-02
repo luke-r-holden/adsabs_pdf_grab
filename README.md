@@ -19,7 +19,7 @@ adsabs_pdf_grab makes use of the `re`, `os`, and `requests` Python modules; the 
 
 ### Installation
 
-To install, either clone this repository to the desired directory with `clone https://github.com/luke-r-holden/adsabs_pdf_grab`, or directly download the `adsabs_pdf_grab.py` file from the GitHub repository web page.
+To install, either clone this repository to the desired directory with `git clone https://github.com/luke-r-holden/adsabs_pdf_grab`, or directly download the `adsabs_pdf_grab.py` file from the GitHub repository web page.
 
 ### Usage
 
