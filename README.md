@@ -27,14 +27,20 @@ Either using a script, Python shell, or Jupyter notebook, the function can be im
 `from adsabs_pdf_grab import adsabs_pdf_grab`
 
 Then, to run, use
-```adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory')```
+```
+adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory')
+```
 where `bibtex_file.bib` is the .bib file containing the BibTeX entries you wish to download .pdf files for, `ads_api_key` is your ADS API token (which you can generate and view [here](https://ui.adsabs.harvard.edu/user/settings/token) once logged in), and `output_dir` is the directory you want to download the .pdf files to.
 
 Optionally, you can also supress all messages during the download process by setting the `verbose` argument to `False`:
-```adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', verbose=False)```
+```
+adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', verbose=False)
+```
 
 By default, any entries that already have a .pdf file of name "[Author][Year].pdf" in the output directory will be skipped. This behaviour can be overwritten setting the `overwrite` argument to `True', which will forcibly redownload all entries in the .bib file and overwrite existing .pdf files. For example:
-```adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', overwrite=True)```
+```
+adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', overwrite=True)
+```
 
 ## Additional notes
 
