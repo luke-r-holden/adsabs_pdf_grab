@@ -13,7 +13,7 @@ The user can also silence text prints to terminal (notifying the user of the suc
 
 ### Requirements
 
-This code was written in Python 3.12.6, and so it is recommended to use this version or later when running. 
+This code was written in Python 3.12.6, and so it is recommended to use this version or later. 
 
 adsabs_pdf_grab makes use of the `re`, `os`, and `requests` Python modules; the former two are included by default in Python releases, while the latter may need to be installed by the user (e.g. with `python3 -m pip install requests`). 
 
@@ -39,14 +39,14 @@ Optionally, you can also supress all messages during the download process by set
 adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', verbose=False)
 ```
 
-By default, any entries that already have a .pdf file of name "[Author][Year].pdf" in the output directory will be skipped. This behaviour can be overwritten setting the `overwrite` argument to `True', which will forcibly redownload all entries in the .bib file and overwrite existing .pdf files. For example:
+By default, any entries that already have a .pdf file of name "[Authors]\_[Year].pdf" in the output directory will be skipped. This behaviour can be overwritten setting the `overwrite` argument to `True', which will forcibly redownload all entries in the .bib file and overwrite existing .pdf files. For example:
 ```
 adsabs_pdf_grab(bibtex_file="/path/to/bibtex_file.bib", ads_api_key='my_api_key', output_dir='/path/to/output_directory', overwrite=True)
 ```
 
 ## Additional notes
 
-In the current version of adsabs_pdf_grab, .pdf files are searched for (and downloaded from) the current sources, in order of 
+In the current version of adsabs_pdf_grab, .pdf files are searched for (and downloaded from) the following sources, in order:
  1) The .pdf file hosted on ADS (common for older papers and articles published before 2000).
  2) The [arXiv](https://arxiv.org/) page for the BibTeX entry.
  3) The publisher/journal page for the BibTeX entry.
