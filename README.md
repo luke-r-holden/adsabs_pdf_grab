@@ -1,4 +1,5 @@
-# adsabs_pdf_grab: A python function to download .pdf files for BibTeX entries using the ADS API.
+# adsabs_pdf_grab 
+## A python function to download .pdf files for BibTeX entries using the ADS API
 
 This Python function takes a BibTeX file as input, parses each entry, identifies the DOI and or arXiv ID, and uses these with the [NASA Astrophysics Data System](https://ui.adsabs.harvard.edu/) API to download a .pdf file for each entry. This allows the user to easily download .pdf files for all papers/articles/etc that they have in a .bib file, which, for example, they might have for an individual project, or a master file containing all papers that they cite in their work.
 
