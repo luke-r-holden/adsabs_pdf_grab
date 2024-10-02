@@ -144,7 +144,7 @@ def extract_doi_arxiv(bibtex_entry):
     return doi, eprint
 
 
-def download_from_bibfile(bibtex_file, ads_api_key, output_dir="./", verbose=True, overwrite=False):
+def adsabs_pdf_grab(bibtex_file, ads_api_key, output_dir="./", verbose=True, overwrite=False):
     """
     Download a .pdf file for each entry in a BibTeX file by extracting the DOI and arXiv ID for each entry and using this to search the NASA ADS ABS database using the ADS API. In the case that multiple papers from the same author(s) in a given year are requested, these will be downloaded as [Author][Year].pdf, [Author][Year]b.pdf, [Author][Year]c.pdf, [Author][Year]d.pdf, [Author][Year]e.pdf.
 
