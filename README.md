@@ -50,6 +50,7 @@ In the current version of adsabs_pdf_grab, .pdf files are searched for (and down
  1) The .pdf file hosted on ADS (common for older papers and articles published before 2000).
  2) The [arXiv](https://arxiv.org/) page for the BibTeX entry.
  3) The publisher/journal page for the BibTeX entry.
+
 The arXiv (pre-print) version of a given entry is given priority due to various issues arising from attempting to access .pdf files directly from publishers and journals, such as URL redirection, log-in screens for institutional access, and paywalls. For these reasons, it is much more reliable to request and download the .pdf file from arXiv.
 
 If there are multiple papers published by the same author(s) in a given year, these are downloaded as [Author][Year].pdf, [Author][Year]b.pdf, [Author][Year]c.pdf, [Author][Year]d.pdf, [Author][Year]e.pdf. Note that, since publishing more than five first-author papers in a single year is exceptionally uncommon (and impressive), this system only extends to the letter `e` --- be mindful of this if you are attempting to use `adsabs_pdf_grab` to download papers from authors that *have* published more than five papers in a single year.
