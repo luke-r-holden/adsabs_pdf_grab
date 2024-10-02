@@ -24,7 +24,9 @@ To install, either clone this repository to the desired directory with `clone ht
 ### Usage
 
 Either using a script, Python shell, or Jupyter notebook, the function can be imported with 
-`from adsabs_pdf_grab import adsabs_pdf_grab`
+```
+from adsabs_pdf_grab import adsabs_pdf_grab
+```
 
 Then, to run, use
 ```
